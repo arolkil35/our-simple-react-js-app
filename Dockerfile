@@ -11,5 +11,5 @@ COPY . /app
 RUN npm run build
 
 #Run Steps
-FROM nginx:stable-alpine
+FROM nginxinc/nginx-unprivileged
 COPY --from=build-step /app/build /usr/share/nginx/html
