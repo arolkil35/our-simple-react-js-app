@@ -11,5 +11,5 @@ COPY . /app
 RUN npm run build
 
 #Run Steps
-FROM nginx:1.23.3-alpine-slim
+FROM nginx:1.17
 COPY --from=build-step /app/build /usr/share/nginx/html
